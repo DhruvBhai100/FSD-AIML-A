@@ -1,22 +1,22 @@
 function register(){
     waitforfiveseconds();
- console.log('register end')   
+console.log('register end')   
 }
 function sendEmail(){
     waitforfiveseconds();
- console.log('send Email end')   
+console.log('send Email end')   
 }
 function login(){
     waitforfiveseconds();
- console.log('login end')   
+console.log('login end')   
 }
 function getData(){
     waitforfiveseconds();
- console.log('get Data end')   
+console.log('get Data end')   
 }
 function displayData(){
     waitforfiveseconds();
- console.log('Display Data end')   
+console.log('Display Data end')   
 }
 function waitforfiveseconds(){
     const ms=new Date().getTime()+5000;
@@ -37,10 +37,10 @@ function register(cb){
       console.log('register end')   
       cb();
     },4000)
- 
+
 }
 function sendEmail(cb){
-   setTimeout(()=>{
+  setTimeout(()=>{
       console.log('Send Email end')   
       cb();
     },3000)  
@@ -65,13 +65,13 @@ function displayData(){
 
 //callback hell
 register(()=>{
-         sendEmail(()=>{
+        sendEmail(()=>{
                 login(()=>{
                       getData(()=>{
-                               displayData();
+                              displayData();
                       });
                 });
-         });
+        });
 });
 
 
@@ -84,15 +84,16 @@ console.log('call other application')
 
 function register(){
     return new Promise((resolve,reject)=>{
-         setTimeout(()=>{
+        setTimeout(()=>{
       console.log('register end')   
       resolve();
     },4000)
     });   
- }
+}
+
 function sendEmail(){
-   return new Promise((resolve,reject)=>{
-         setTimeout(()=>{
+  return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
       console.log('send Email end')   
       resolve();
     },4000)
@@ -100,23 +101,23 @@ function sendEmail(){
 }
 function login(){
     return new Promise((resolve,reject)=>{
-         setTimeout(()=>{
+        setTimeout(()=>{
       console.log('login end')   
       reject('Login Error');
     },4000)
 });
 }
 function getData(){
-     return new Promise((resolve,reject)=>{
-         setTimeout(()=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
       console.log('get data end')   
       resolve();
     },4000)
 });  
 }
 function displayData(){
-     return new Promise((resolve,reject)=>{
-         setTimeout(()=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
       console.log('display data end')   
       resolve();
     },4000)
@@ -132,7 +133,7 @@ function displayData(){
 // console.log('Error:'+err);
 // })
 
- async function f1(){
+async function f1(){
     try{
     await register();
     await sendEmail();
