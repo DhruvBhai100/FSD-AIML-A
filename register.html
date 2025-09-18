@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register here</title>
+</head>
+<body>
+    <h1>register here</h1>
+    <form name="register" method="post" action="register.js">
+        <Label for ="name">Name:</Label>
+        <input type="text" name="uname" placeholder="Enter user Name" required/><br/>
+        
+        <Label for ="mobile">Mobile No:</Label>
+        <input type="number" name="mobile" placeholder="Enter user Number" required/><br/>
+        
+        <Label for ="email">Email:</Label>
+        <input type="email" name="email" placeholder="Enter user E-mail" required/><br/>
+        
+        <Label for ="dob">DOB:</Label>
+        <input type="date" name="dob"/><br/>
+
+        <Label for ="name">Gender</Label>
+        <input type="radio" name="gender" value="M"/>Male
+        <input type="radio" name="gender" value="F"/>Female
+        <br/>
+
+        <Label for ="address">Address:</Label>
+        <textarea rows="5" cols="">
+        </textarea>
+        <br/>
+        <Label for="address">Branch:</Label>
+
+        <select name="branch">
+            <option value="cse">CSE</option>
+            <option value="cse-aiml">CSE-AIML</option>
+            <option value="cse-ds">CSE-DS</option>
+            <option value="cs">CS</option>
+            <option value="ece">ECE</option>
+        </select>
+        <br/>
+
+        <label for="sem">Semester:</label>
+        <select name="sem">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+        </select>
+        <br/>
+
+        <input type="submit" value="Register Here"/>
+        <input type="reset" value="Reset"/>
+
+        </form>
+    </body>
+</html>
