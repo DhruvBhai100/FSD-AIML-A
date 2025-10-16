@@ -1,0 +1,17 @@
+const image= document.createElement('img');
+image.src='https://m.media-amazon.com/images/I/71UF9mDAX3L.jpg';
+image.width=250;
+const h4= document.createElement('h4');
+h4.innerText='Title: Physics';
+const h3= document.createElement('h3');
+h4.innerText='Price: Rs. 500';
+const bt= document.createElement('button');
+bt.innerText='Buy Now';
+const child = document.createElement('div');
+child.className = "card";
+child.appendChild(image);
+child.appendChild(h4);
+child.appendChild(h3);
+child.appendChild(bt);
+const parent = document.getElementById('root');
+parent.appendChild(child);
